@@ -1,0 +1,14 @@
+; test3.S: General test
+LDX #$00
+LDY #$00
+TXA
+STA $0200,Y 
+PHA
+INX
+INY
+CPY #$10
+PLA
+STA $0200,Y
+LDA ($ff,X)
+INY
+CPY #$20
